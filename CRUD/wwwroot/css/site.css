@@ -1,0 +1,13 @@
+﻿.form_crud .form-control{
+
+    position : relative;
+    width: 400px;
+    margin : auto;
+    padding : 15px;
+}
+
+
+#editForm {
+    display : none;
+    
+}

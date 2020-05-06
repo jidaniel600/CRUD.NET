@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Crear";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h2>Creacion Usuario</h2>
+    </div>
+    <div class="card-body">
+
+        <div class="col-sm-5 messages"></div>
+        <form method="post" class="form_crud" id="registro">
+            <div class="form-group">
+                <label for="tipoId">
+                    TipoIdentificacion :
+                    <select id="tipoId" name="tipoId">
+                    </select>
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="cedula">
+                    Cedula :
+                    <input type="text" id="cedula" class="form-control" name="cedula" />
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+
+            </div>
+            <div class="form-group">
+
+                <label for="nombre">
+                    Nombre :
+                    <input type="text" id="nombre" class="form-control" name="nombre" />
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+            </div>
+            <div class="form-group">
+
+                <label for="apellido">
+                    Apellido :
+                    <input type="text" id="apellido" class="form-control" name="apellido" />
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+            </div>
+            <div class="form-group">
+
+                <label for="email">
+                    Email :
+                    <input type="email" id="email" class="form-control" name="email" />
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+
+            </div>
+            <div class="form-group">
+
+                <label for="password">
+                    Password :
+                    <input type="password" id="password" class="form-control" name="password" />
+                </label>
+                <div class="col-sm-5 mensaje"></div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-success">Crear Usuario</button>
+                    </div>
+
+                    <div class="col-md-3">
+                        <button type="button" id="limpiarForm" class="btn btn-success">Limpiar formulario</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@Html.ActionLink("Regresar al Menu Principal",  "Home", "CrudDashBoard")
+
+@section Scripts
+{
+    <script src="~/js/usuarios.js" type="text/javascript"></script>
+}
+

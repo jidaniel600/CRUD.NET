@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+
+    <div class="card">
+
+        
+        <div class="card-header">
+            <h2>Usuario Reportados</h2>
+        </div>
+        
+
+        <div class="card-body">
+            <div id="editForm">
+                <h3>Editar Usuario</h3>
+                <form id="EditarForm" action="javascript:void(0);">
+                    <input type="hidden" id="edit-id">
+                    <input type="hidden" id="edit-tipoId">
+                    <input type="hidden" id="edit-contraseña">
+                    <input type="text" id="edit-nombre">
+                    <input type="text" id="edit-apellido">
+                    <input type="text" id="edit-email">
+                    <input type="submit" value="Guardar">
+                    <a id="linkclose" aria-label="Close">&#10006;</a>
+                </form>
+            </div>
+            <a href="@Url.ActionLink("Crear", "CrudDashBoard")">Crear Nuevo Usuario </a>
+            <table class="table table-bordered " id="tabla_usuarios">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Operacion</th>
+
+                    </tr>
+
+                </thead>
+                <tbody id="usuariosBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+@section Scripts
+{
+    <script src="~/js/home.js"></script>
+}
